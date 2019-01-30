@@ -148,8 +148,6 @@ where country = 'Canada';
 
 -- 7d. Sales have been lagging among young families, and you wish to target all family movies for a promotion. Identify all movies categorized as _family_ films.
 
-
-
 select title
 from film
 where film_id in
@@ -175,6 +173,7 @@ group by f.film_id
 order by num_rentals desc;
 
 select * from staff;
+
 -- 7f. Write a query to display how much business, in dollars, each store brought in.
 select s.store_id, st.staff_id, sum(p.amount)
 from store s
@@ -183,8 +182,6 @@ on s.store_id = st.store_id
 inner join payment p
 on st.staff_id = p.staff_id
 group by p.staff_id;
-
-
 
 
 -- 7g. Write a query to display for each store its store ID, city, and country.
